@@ -44,7 +44,7 @@ export const EvervaultCard = ({
     >
       <div
         onMouseMove={onMouseMove}
-        className="group/card rounded-3xl border-2 hover:border-red-700 transition w-full relative overflow-hidden bg-transparent flex items-center justify-center h-full"
+        className="group/card rounded-3xl border-2 hover:border-red-600 transition w-full relative overflow-hidden bg-transparent flex items-center justify-center h-full"
       >
         <CardPattern
           mouseX={mouseX}
@@ -54,7 +54,7 @@ export const EvervaultCard = ({
         <div className="relative z-10 flex flex-col items-center justify-center">
           <div className="relative h-44 w-44  rounded-full flex items-center justify-center text-white font-bold text-4xl">
             <div className="absolute w-full h-full dark:bg-black/[0.8] blur-sm rounded-full" />
-            <span className="text-white text-9xl z-20">{text}</span>
+            <span className="text-white text-8xl md:text-9xl z-20">{text}</span>
             
           </div>
           <Example/>

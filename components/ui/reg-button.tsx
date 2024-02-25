@@ -60,10 +60,10 @@ const FollowButton = () => {
       }}
       onMouseEnter={scramble}
       onMouseLeave={stopScramble}
-      className="group relative overflow-hidden rounded-lg border-[1px] border-white bg-black px-4 py-2 font-sans font-medium uppercase text-white hover:text-red-600 transition-colors "
+      className="group relative overflow-hidden hover:border-red-600 rounded-lg border-[1px] border-white bg-black px-4 py-2 md:px-8 md:py-4 font-sans font-medium uppercase text-white hover:text-red-600 transition-colors "
     >
       <div className="relative z-10 flex items-center gap-2">
-        <span>{text}</span>
+        <span className="md:text-xl">{text}</span>
       </div>
       <motion.span
         initial={{
