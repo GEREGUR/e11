@@ -1,11 +1,12 @@
-import React from 'react'
+import { Parallax } from '@/components/ui/parallax';
+import React from 'react';
 
 const Test = () => {
   return (
     <div>
-        testpage
+      <Parallax />
     </div>
-  )
-}
+  );
+};
 
-export default Test
+export default Test;
