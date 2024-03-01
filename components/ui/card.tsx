@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useMotionTemplate, motion } from "framer-motion";
 import { cn } from "@/utils/cn";
 import Example from "./reg-button";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 export const EvervaultCard = ({
   text,
@@ -58,6 +59,7 @@ export const EvervaultCard = ({
             
           </div>
           <Example/>
+          <MdKeyboardArrowRight className="text-white absolute bottom-[-6em]" size={40}/>
         </div>
       </div>
     </div>
@@ -72,7 +74,7 @@ export function CardPattern({ mouseX, mouseY, randomString }: any) {
     <div className="pointer-events-none">
       <div className="absolute inset-0 rounded-2xl  [mask-image:linear-gradient(white,transparent)] group-hover/card:opacity-50"></div>
       <motion.div
-        className="absolute inset-0 rounded-2xl bg-gradient-to-r from-red-600 to-pink-700 opacity-0  group-hover/card:opacity-100 backdrop-blur-xl transition duration-500"
+        className="absolute inset-0 rounded-2xl bg-gradient-to-r from-red-600 to-red-700 opacity-0  group-hover/card:opacity-100 backdrop-blur-xl transition duration-500"
         style={style}
       />
       <motion.div
