@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useMotionTemplate, motion } from "framer-motion";
 import { cn } from "@/utils/cn";
 import Example from "./reg-button";
-import { MdKeyboardArrowRight } from "react-icons/md";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 export const EvervaultCard = ({
   text,
@@ -39,13 +39,13 @@ export const EvervaultCard = ({
   return (
     <div
       className={cn(
-        "p-10 bg-transparent aspect-square  flex items-center justify-center w-full h-full relative",
+        "bg-transparent aspect-square  flex items-center justify-center w-full h-full relative",
         className
       )}
     >
       <div
         onMouseMove={onMouseMove}
-        className="group/card rounded-3xl border-2 hover:border-red-600 transition w-full relative overflow-hidden bg-transparent flex items-center justify-center h-full"
+        className="group/card transition w-full relative overflow-hidden bg-transparent flex items-center justify-center h-full"
       >
         <CardPattern
           mouseX={mouseX}
@@ -55,11 +55,11 @@ export const EvervaultCard = ({
         <div className="relative z-10 flex flex-col items-center justify-center">
           <div className="relative h-44 w-44  rounded-full flex items-center justify-center text-white font-bold text-4xl">
             <div className="absolute w-full h-full dark:bg-black/[0.8] blur-sm rounded-full" />
-            <span className="text-white text-8xl md:text-9xl z-20">{text}</span>
+            <span className="text-white text-8xl md:text-9xl z-20 select-none">{text}</span>
             
           </div>
           <Example/>
-          <MdKeyboardArrowRight className="text-white absolute bottom-[-6em]" size={40}/>
+          <MdKeyboardArrowDown className="text-white absolute bottom-[-6em]" size={40}/>
         </div>
       </div>
     </div>
@@ -72,13 +72,13 @@ export function CardPattern({ mouseX, mouseY, randomString }: any) {
 
   return (
     <div className="pointer-events-none">
-      <div className="absolute inset-0 rounded-2xl  [mask-image:linear-gradient(white,transparent)] group-hover/card:opacity-50"></div>
+      <div className="absolute inset-0 rounded-2xl border-2 [mask-image:linear-gradient(white,transparent)] group-hover/card:opacity-100"></div>
       <motion.div
         className="absolute inset-0 rounded-2xl bg-gradient-to-r from-red-600 to-red-700 opacity-0  group-hover/card:opacity-100 backdrop-blur-xl transition duration-500"
         style={style}
       />
       <motion.div
-        className="absolute inset-0 rounded-2xl opacity-0 mix-blend-overlay  group-hover/card:opacity-100"
+        className="absolute inset-0 rounded-2xl opacity-0 mix-blend-overlay group-hover/card:opacity-100"
         style={style}
       >
         <p className="absolute inset-x-0 text-xs h-full break-words whitespace-pre-wrap text-white font-mono font-bold transition duration-500">
