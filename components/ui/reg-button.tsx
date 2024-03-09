@@ -2,9 +2,7 @@ import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 const Example = () => {
-  return (
-      <FollowButton />
-  );
+  return <FollowButton />;
 };
 
 const TARGET_TEXT = "Follow us";
@@ -60,7 +58,7 @@ const FollowButton = () => {
       }}
       onMouseEnter={scramble}
       onMouseLeave={stopScramble}
-      className="group relative hover:border-none overflow-hidden rounded-lg border-[1px] border-white bg-black px-4 py-2 md:px-8 md:py-4 font-sans font-medium uppercase text-white hover:text-red-600 transition-colors "
+      className="group relative overflow-hidden rounded-lg border-[1px] border-white bg-black px-4 py-2 font-sans font-medium uppercase text-white transition-colors hover:text-red-600 md:px-8 md:py-4 "
     >
       <div className="relative z-10 flex items-center gap-2">
         <span className="md:text-xl">{text}</span>
@@ -78,7 +76,7 @@ const FollowButton = () => {
           duration: 1,
           ease: "linear",
         }}
-        className="duration-300 absolute inset-0 z-0 scale-125 bg-gradient-to-t from-indigo-400/0 from-40% via-red-500/100 to-blue-400/0 to-60% opacity-0 transition-opacity group-hover:opacity-100"
+        className="absolute inset-0 z-0 scale-125 bg-gradient-to-t from-indigo-400/0 from-40% via-red-500/100 to-blue-400/0 to-60% opacity-0 transition-opacity duration-300 group-hover:opacity-100"
       />
     </motion.button>
   );
