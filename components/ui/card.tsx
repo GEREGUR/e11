@@ -23,7 +23,7 @@ export const EvervaultCard = ({
       let str = generateRandomString(1500);
       setRandomString(str);
     }, 50); // Update every 10 milliseconds
-  
+
     return () => clearInterval(interval);
   }, []);
 
@@ -36,16 +36,18 @@ export const EvervaultCard = ({
     setRandomString(str);
   }
 
+  // const [scrolled, setScrolled] = useState(false)
+
   return (
     <div
       className={cn(
-        "bg-transparent aspect-square  flex items-center justify-center w-full h-full relative",
-        className
+        "relative flex aspect-square h-full w-full items-center justify-center bg-transparent",
+        className,
       )}
     >
       <div
         onMouseMove={onMouseMove}
-        className="group/card transition w-full relative overflow-hidden bg-transparent flex items-center justify-center h-full"
+        className="group/card relative flex h-full w-full items-center justify-center overflow-hidden bg-transparent transition"
       >
         <CardPattern
           mouseX={mouseX}
@@ -53,13 +55,17 @@ export const EvervaultCard = ({
           randomString={randomString}
         />
         <div className="relative z-10 flex flex-col items-center justify-center">
-          <div className="relative h-44 w-44  rounded-full flex items-center justify-center text-white font-bold text-4xl">
-            <div className="absolute w-full h-full dark:bg-black/[0.8] blur-sm rounded-full" />
-            <span className="text-white text-8xl md:text-9xl z-20 select-none">{text}</span>
-            
+          <div className="relative flex h-44  w-44 items-center justify-center rounded-full text-4xl font-bold text-white">
+            <div className="absolute h-full w-full rounded-full blur-sm dark:bg-black/[0.8]" />
+            <span className="z-20 select-none text-8xl text-white md:text-9xl">
+              {text}
+            </span>
           </div>
-          <Example/>
-          <MdKeyboardArrowDown className="text-white absolute bottom-[-6em]" size={40}/>
+          <Example />
+          <MdKeyboardArrowDown
+            className="absolute bottom-[-6em] text-white"
+            size={40}
+          />
         </div>
       </div>
     </div>
@@ -72,16 +78,16 @@ export function CardPattern({ mouseX, mouseY, randomString }: any) {
 
   return (
     <div className="pointer-events-none">
-      <div className="absolute inset-0 rounded-2xl border-2 [mask-image:linear-gradient(white,transparent)] group-hover/card:opacity-100"></div>
+      <div className="absolute inset-0 rounded-2xl border group-hover/card:opacity-100"></div>
       <motion.div
-        className="absolute inset-0 rounded-2xl bg-gradient-to-r from-red-600 to-red-700 opacity-0  group-hover/card:opacity-100 backdrop-blur-xl transition duration-500"
+        className="absolute inset-0 rounded-2xl bg-gradient-to-r from-red-600 to-red-700 opacity-0  backdrop-blur-xl transition duration-500 group-hover/card:opacity-100"
         style={style}
       />
       <motion.div
         className="absolute inset-0 rounded-2xl opacity-0 mix-blend-overlay group-hover/card:opacity-100"
         style={style}
       >
-        <p className="absolute inset-x-0 text-xs h-full break-words whitespace-pre-wrap text-white font-mono font-bold transition duration-500">
+        <p className="absolute inset-x-0 h-full whitespace-pre-wrap break-words font-mono text-xs font-bold text-white transition duration-500">
           {randomString}
         </p>
       </motion.div>
@@ -93,7 +99,7 @@ const characters =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 export const generateRandomString = (length: number) => {
   let result = "";
-  for (let i = 0; i < length*7 ; i++) {
+  for (let i = 0; i < length * 7; i++) {
     result += characters.charAt(Math.floor(Math.random() * characters.length));
   }
   return result;
