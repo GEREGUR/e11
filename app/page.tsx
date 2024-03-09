@@ -1,6 +1,7 @@
 "use client";
 
 import { EvervaultCard } from "@/components/ui/card";
+import { Text } from "@/components/ui/text";
 import { BentoGrid, BentoGridItem } from "@/components/ui/grid";
 import {
   IconArrowWaveRightUp,
@@ -77,6 +78,7 @@ export default function Home() {
       >
         <EvervaultCard text="E11®"></EvervaultCard>
       </div>
+      <Text />
       <BentoGrid className="mx-auto max-w-full p-10">
         {items.map((item, i) => (
           <BentoGridItem
