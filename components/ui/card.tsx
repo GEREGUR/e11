@@ -78,7 +78,7 @@ export function CardPattern({ mouseX, mouseY, randomString }: any) {
 
   return (
     <div className="pointer-events-none">
-      <div className="absolute inset-0 rounded-2xl border group-hover/card:opacity-100"></div>
+      <div className="absolute inset-0 rounded-2xl group-hover/card:opacity-100"></div>
       <motion.div
         className="absolute inset-0 rounded-2xl bg-gradient-to-r from-red-600 to-red-700 opacity-0  backdrop-blur-xl transition duration-500 group-hover/card:opacity-100"
         style={style}

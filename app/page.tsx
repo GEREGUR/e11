@@ -73,7 +73,7 @@ export default function Home() {
   return (
     <div className="bg-black">
       <div
-        className="relative mx-auto mt-5 flex flex-col items-start p-10"
+        className="relative mx-auto mt-5 flex flex-col items-start p-6"
         style={{ height: "95vh" }}
       >
         <EvervaultCard text="E11®"></EvervaultCard>
