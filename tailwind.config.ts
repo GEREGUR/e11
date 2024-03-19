@@ -3,10 +3,10 @@ import type { Config } from "tailwindcss";
 const config: Config = {
   darkMode: "class",
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -18,7 +18,18 @@ const config: Config = {
       },
     },
     extend: {
+      transitionDuration: {
+        "2000": "2000ms",
+      },
       keyframes: {
+        shimmer: {
+          from: {
+            backgroundPosition: "0 0",
+          },
+          to: {
+            backgroundPosition: "-200% 0",
+          },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -59,7 +70,7 @@ const config: Config = {
           "100%": {
             transform: "translateY(-50%)",
           },
-      },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -69,18 +80,19 @@ const config: Config = {
         third: "moveInCircle 40s linear infinite",
         fourth: "moveHorizontal 40s ease infinite",
         fifth: "moveInCircle 20s ease infinite",
+        shimmer: "shimmer 2s linear infinite",
       },
     },
   },
   plugins: [
     require("tailwindcss-animate"),
-    function ({ addUtilities } : {addUtilities: Function}) {
+    function ({ addUtilities }: { addUtilities: Function }) {
       const newUtilities = {
-        '.mask-radial-gradient': {
-          'mask-image': 'radial-gradient(white, transparent)',
+        ".mask-radial-gradient": {
+          "mask-image": "radial-gradient(white, transparent)",
         },
       };
-      addUtilities(newUtilities, ['group-hover']);
+      addUtilities(newUtilities, ["group-hover"]);
     },
   ],
 };

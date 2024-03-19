@@ -1,5 +1,5 @@
-import { Parallax } from '@/components/ui/parallax';
-import React, { useEffect } from 'react'
+import { Parallax } from "@/components/ui/parallax";
+import React from "react";
 
 const Test = () => {
   return (

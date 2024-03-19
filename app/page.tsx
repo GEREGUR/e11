@@ -74,7 +74,7 @@ export default function Home() {
     <div className="bg-black">
       <div
         className="relative mx-auto mt-5 flex flex-col items-start p-10"
-        style={{ height: "95vh" /* Adjust the percentage as needed */ }}
+        style={{ height: "95vh" }}
       >
         <EvervaultCard text="E11®"></EvervaultCard>
       </div>
@@ -91,28 +91,22 @@ export default function Home() {
           />
         ))}
       </BentoGrid>
-      <Accordion type="single" collapsible className="p-10">
+      <Accordion type="single" collapsible className="p-10 text-white">
         <AccordionItem value="item-1">
-          <AccordionTrigger className="text-white">
-            Is it accessible?
-          </AccordionTrigger>
+          <AccordionTrigger>Is it accessible?</AccordionTrigger>
           <AccordionContent>
             Yes. It adheres to the WAI-ARIA design pattern.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-2">
-          <AccordionTrigger className="text-white">
-            Is it styled?
-          </AccordionTrigger>
+          <AccordionTrigger>Is it styled?</AccordionTrigger>
           <AccordionContent>
             Yes. It comes with default styles that matches the other
             components&apos; aesthetic.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-3">
-          <AccordionTrigger className="text-white">
-            Is it animated?
-          </AccordionTrigger>
+          <AccordionTrigger>Is it animated?</AccordionTrigger>
           <AccordionContent>
             Yes. It's animated by default, but you can disable it if you prefer.
           </AccordionContent>

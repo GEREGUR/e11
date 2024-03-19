@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useMotionTemplate, motion } from "framer-motion";
 import { cn } from "@/utils/cn";
 import Example from "./reg-button";
-import { MdKeyboardArrowDown } from "react-icons/md";
+// import { MdKeyboardArrowDown } from "react-icons/md";
 
 export const EvervaultCard = ({
   text,
@@ -62,10 +62,10 @@ export const EvervaultCard = ({
             </span>
           </div>
           <Example />
-          <MdKeyboardArrowDown
-            className="absolute bottom-[-6em] text-white"
+          {/* <MdKeyboardArrowDown
+            className="duration-2000 absolute bottom-[-6em] animate-bounce text-white"
             size={40}
-          />
+          /> */}
         </div>
       </div>
     </div>
