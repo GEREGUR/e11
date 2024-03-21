@@ -18,6 +18,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Footer from "@/components/ui/footer";
+import Team from "@/components/ui/team";
 
 const Skeleton = () => (
   <div className="flex h-full min-h-[6rem] w-full flex-1 rounded-xl bg-gradient-to-br from-neutral-300 to-neutral-500"></div>
@@ -76,7 +78,7 @@ export default function Home() {
         className="relative mx-auto mt-5 flex flex-col items-start p-6"
         style={{ height: "95vh" }}
       >
-        <EvervaultCard text="E11®"></EvervaultCard>
+        <EvervaultCard text="ER11"></EvervaultCard>
       </div>
       <Text />
       <BentoGrid className="mx-auto max-w-full p-10">
@@ -94,24 +96,19 @@ export default function Home() {
       <Accordion type="single" collapsible className="p-10 text-white">
         <AccordionItem value="item-1">
           <AccordionTrigger>Is it accessible?</AccordionTrigger>
-          <AccordionContent>
-            Yes. It adheres to the WAI-ARIA design pattern.
-          </AccordionContent>
+          <AccordionContent>Yes. It is.</AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-2">
           <AccordionTrigger>Is it styled?</AccordionTrigger>
-          <AccordionContent>
-            Yes. It comes with default styles that matches the other
-            components&apos; aesthetic.
-          </AccordionContent>
+          <AccordionContent>Yes. Of course.</AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-3">
           <AccordionTrigger>Is it animated?</AccordionTrigger>
-          <AccordionContent>
-            Yes. It's animated by default, but you can disable it if you prefer.
-          </AccordionContent>
+          <AccordionContent>Yes. For sure.</AccordionContent>
         </AccordionItem>
       </Accordion>
+      <Team />
+      <Footer />
     </div>
   );
 }
