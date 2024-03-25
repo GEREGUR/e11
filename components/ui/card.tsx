@@ -19,7 +19,7 @@ export const EvervaultCard = ({
 
   useEffect(() => {
     const interval = setInterval(() => {
-      let str = generateRandomString(1500);
+      let str = generateRandomString(10500);
       setRandomString(str);
     }, 50); // Update every 10 milliseconds
 
@@ -98,7 +98,7 @@ const characters =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 export const generateRandomString = (length: number) => {
   let result = "";
-  for (let i = 0; i < length * 7; i++) {
+  for (let i = 0; i < length * 10; i++) {
     result += characters.charAt(Math.floor(Math.random() * characters.length));
   }
   return result;

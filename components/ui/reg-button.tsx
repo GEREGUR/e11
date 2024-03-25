@@ -9,7 +9,7 @@ const TARGET_TEXT = "Follow us";
 const CYCLES_PER_LETTER = 2;
 const SHUFFLE_TIME = 50;
 
-const CHARS = "!@#$%^&*():{};|,.<>/?";
+const CHARS = "!@#9$%^&()2:{};|,1.<>/?";
 
 const FollowButton = () => {
   const intervalRef = useRef<NodeJS.Timeout | null>(null);

@@ -1,4 +1,4 @@
-"use client";
+'use client'
 
 import { EvervaultCard } from "@/components/ui/card";
 import { Text } from "@/components/ui/text";
@@ -19,8 +19,13 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Footer from "@/components/ui/footer";
-import Team from "@/components/ui/team";
+import Team from "@/components/ui/team-grid";
+import { Chakra_Petch } from "next/font/google";
 
+const chackra = Chakra_Petch({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+})
 const Skeleton = () => (
   <div className="flex h-full min-h-[6rem] w-full flex-1 rounded-xl bg-gradient-to-br from-neutral-300 to-neutral-500"></div>
 );
@@ -73,42 +78,44 @@ const items = [
 
 export default function Home() {
   return (
-    <div className="bg-black">
-      <div
-        className="relative mx-auto mt-5 flex flex-col items-start p-6"
-        style={{ height: "95vh" }}
-      >
-        <EvervaultCard text="ER11"></EvervaultCard>
+    <main className={chackra.className}>
+      <div className="bg-black">
+        <div
+          className="relative mx-auto mt-5 flex flex-col items-start p-6"
+          style={{ height: "95vh" }}
+        >
+          <EvervaultCard text="ER11"></EvervaultCard>
+        </div>
+        <Text />
+        <BentoGrid className="mx-auto max-w-full p-10">
+          {items.map((item, i) => (
+            <BentoGridItem
+              key={i}
+              title={item.title}
+              description={item.description}
+              header={item.header}
+              icon={item.icon}
+              className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+            />
+          ))}
+        </BentoGrid>
+        <Team />
+        <Accordion type="single" collapsible className="p-10 text-white">
+          <AccordionItem value="item-1">
+            <AccordionTrigger>Is it accessible?</AccordionTrigger>
+            <AccordionContent>Yes. It is.</AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-2">
+            <AccordionTrigger>Is it styled?</AccordionTrigger>
+            <AccordionContent>Yes. Of course.</AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-3">
+            <AccordionTrigger>Is it animated?</AccordionTrigger>
+            <AccordionContent>Yes. For sure.</AccordionContent>
+          </AccordionItem>
+        </Accordion>
+        <Footer />
       </div>
-      <Text />
-      <BentoGrid className="mx-auto max-w-full p-10">
-        {items.map((item, i) => (
-          <BentoGridItem
-            key={i}
-            title={item.title}
-            description={item.description}
-            header={item.header}
-            icon={item.icon}
-            className={i === 3 || i === 6 ? "md:col-span-2" : ""}
-          />
-        ))}
-      </BentoGrid>
-      <Accordion type="single" collapsible className="p-10 text-white">
-        <AccordionItem value="item-1">
-          <AccordionTrigger>Is it accessible?</AccordionTrigger>
-          <AccordionContent>Yes. It is.</AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="item-2">
-          <AccordionTrigger>Is it styled?</AccordionTrigger>
-          <AccordionContent>Yes. Of course.</AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="item-3">
-          <AccordionTrigger>Is it animated?</AccordionTrigger>
-          <AccordionContent>Yes. For sure.</AccordionContent>
-        </AccordionItem>
-      </Accordion>
-      <Team />
-      <Footer />
-    </div>
+    </main>
   );
 }
