@@ -99,7 +99,9 @@ export default function Home() {
             />
           ))}
         </BentoGrid>
-        <Team />
+        <div className="mx-10">
+          <Team />
+        </div>
         <Accordion type="single" collapsible className="p-10 text-white">
           <AccordionItem value="item-1">
             <AccordionTrigger>Is it accessible?</AccordionTrigger>
