@@ -86,10 +86,10 @@ export function CardPattern({ mouseX, mouseY, randomString }: any) {
 
  useEffect(()=>{
   if (window.innerWidth <= 768) {
-    setOptionalRender(1000);
+    setOptionalRender(1500);
   }
 
- }, [])
+ }, [window.innerWidth])
   
 
   let maskImage = useMotionTemplate`radial-gradient(${optionalRender}px at ${mouseX}px ${mouseY}px, white, transparent)`;
