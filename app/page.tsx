@@ -1,4 +1,4 @@
-'use client'
+
 
 import { EvervaultCard } from "@/components/ui/card";
 import { Text } from "@/components/ui/text";
@@ -32,8 +32,8 @@ const Skeleton = () => (
 
 const items = [
   {
-    title: "The Dawn of Innovation",
-    description: "Explore the birth of groundbreaking ideas and inventions.",
+    title: "360 Degree Assignment",
+    description: "Explore your pros & cons with your team",
     header: <Skeleton />,
     icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
   },
