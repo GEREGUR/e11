@@ -19,7 +19,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Footer from "@/components/ui/footer";
-import Team from "@/components/ui/team-grid";
+// import Team from "@/components/ui/team-grid";
 import { Chakra_Petch } from "next/font/google";
 
 const chackra = Chakra_Petch({
@@ -99,9 +99,9 @@ export default function Home() {
             />
           ))}
         </BentoGrid>
-        <div className="mx-2 sm:mx-10">
+        {/* <div className="mx-2 sm:mx-10">
           <Team />
-        </div>
+        </div> */}
         <Accordion type="single" collapsible className="p-2 mt-24 sm:p-10 text-white">
           <AccordionItem value="item-1">
             <AccordionTrigger>Is it accessible?</AccordionTrigger>
