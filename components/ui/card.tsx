@@ -85,7 +85,7 @@ export function CardPattern({ mouseX, mouseY, randomString }: any) {
   
 
  useEffect(()=>{
-  if (window.innerWidth <= 480) {
+  if (window.innerWidth <= 768) {
     setOptionalRender(1000);
   }
 
