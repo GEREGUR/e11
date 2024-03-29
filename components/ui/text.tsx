@@ -1,6 +1,6 @@
 export const Text = () => {
   return (
-    <div className="text-white flex items-center justify-center flex-col px-6 py-24">
+    <div className="text-white flex items-center justify-center flex-col tracking-tight px-2 sm:px-6 py-12">
       <h2 className="text-5xl py-10">About Us</h2>
       <p className="flex h-auto w-full items-center justify-center text-center">
         We are a leading digital and web studio that offers our clients a

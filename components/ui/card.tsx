@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useMotionTemplate, motion } from "framer-motion";
 import { cn } from "@/utils/cn";
 import Example from "./reg-button";
+
 // import { MdKeyboardArrowDown } from "react-icons/md";
 
 export const EvervaultCard = ({
@@ -33,8 +34,11 @@ export const EvervaultCard = ({
 
     const str = generateRandomString(1500);
     setRandomString(str);
-  }
+  }  
 
+
+  // console.log(width)
+  // console.log(height)
   // const [scrolled, setScrolled] = useState(false)
 
   return (
@@ -45,6 +49,7 @@ export const EvervaultCard = ({
       )}
     >
       <div
+        
         onMouseMove={onMouseMove}
         className="group/card relative flex h-full w-full items-center justify-center overflow-hidden bg-transparent transition"
       >
@@ -72,8 +77,24 @@ export const EvervaultCard = ({
 };
 
 export function CardPattern({ mouseX, mouseY, randomString }: any) {
-  let maskImage = useMotionTemplate`radial-gradient(250px at ${mouseX}px ${mouseY}px, white, transparent)`;
+  
+
+  const [optionalRender, setOptionalRender] = useState(250)
+  
+  
+  
+
+ useEffect(()=>{
+  if (window.innerWidth <= 480) {
+    setOptionalRender(1000);
+  }
+
+ }, [])
+  
+
+  let maskImage = useMotionTemplate`radial-gradient(${optionalRender}px at ${mouseX}px ${mouseY}px, white, transparent)`;
   let style = { maskImage, WebkitMaskImage: maskImage };
+
 
   return (
     <div className="pointer-events-none">

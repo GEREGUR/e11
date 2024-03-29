@@ -58,7 +58,7 @@ const FollowButton = () => {
       }}
       onMouseEnter={scramble}
       onMouseLeave={stopScramble}
-      className="bg-blacks group relative overflow-hidden rounded-lg px-[0.1rem] py-[0.1rem] font-sans font-medium uppercase text-white transition-colors hover:text-red-600 "
+      className="bg-blacks group relative overflow-hidden rounded-lg px-[0.1rem] py-[0.1rem] font-sans font-medium uppercase text-white transition-colors"
     >
       <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#bd0000_0%,#460000_50%,#BD0000_100%)]" />
       <div className="relative z-10 flex h-full w-full items-center gap-2 rounded-lg bg-black px-8 py-4">

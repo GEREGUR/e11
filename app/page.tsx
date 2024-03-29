@@ -81,13 +81,13 @@ export default function Home() {
     <main className={chackra.className}>
       <div className="bg-black">
         <div
-          className="relative mx-auto mt-5 flex flex-col items-start p-6"
+          className="relative mx-auto mt-2 flex flex-col items-start p-6"
           style={{ height: "95vh" }}
         >
           <EvervaultCard text="ER11"></EvervaultCard>
         </div>
         <Text />
-        <BentoGrid className="mx-auto max-w-full p-10">
+        <BentoGrid className="mx-auto max-w-full p-2 sm:p-10">
           {items.map((item, i) => (
             <BentoGridItem
               key={i}
@@ -99,10 +99,10 @@ export default function Home() {
             />
           ))}
         </BentoGrid>
-        <div className="mx-10">
+        <div className="mx-2 sm:mx-10">
           <Team />
         </div>
-        <Accordion type="single" collapsible className="p-10 text-white">
+        <Accordion type="single" collapsible className="p-2 mt-24 sm:p-10 text-white">
           <AccordionItem value="item-1">
             <AccordionTrigger>Is it accessible?</AccordionTrigger>
             <AccordionContent>Yes. It is.</AccordionContent>
