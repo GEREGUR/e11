@@ -27,25 +27,25 @@ const chackra = Chakra_Petch({
   weight: ['400', '700'],
 })
 const Skeleton = () => (
-  <div className="flex h-full min-h-[6rem] w-full flex-1 rounded-xl bg-gradient-to-br from-neutral-300 to-neutral-500"></div>
+  <div className="flex h-full min-h-[6rem] w-full flex-1 rounded-xl bg-gradient-to-br from-pink-300 to-red-700"></div>
 );
 
 const items = [
   {
     title: "360 Degree Assignment",
-    description: "Explore your pros & cons with your team",
+    description: "Explore personal pros & cons with your team",
     header: <Skeleton />,
     icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
+    title: "Worlink Auto",
+    description: "Discover the beauty of Chinese auto.",
     header: <Skeleton />,
     icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Art of Design",
-    description: "Discover the beauty of thoughtful and functional design.",
+    title: "Social Market",
+    description: "Visualize the beauty of thoughtful and functional design.",
     header: <Skeleton />,
     icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
@@ -96,7 +96,7 @@ export default function Home() {
               header={item.header}
               icon={item.icon}
               className={i === 3 || i === 6 ? "md:col-span-2" : ""}
-            />
+            ></BentoGridItem>
           ))}
         </BentoGrid>
         {/* <div className="mx-2 sm:mx-10">

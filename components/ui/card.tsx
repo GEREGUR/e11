@@ -81,9 +81,9 @@ export const EvervaultCard = ({
 export function CardPattern({ mouseX, mouseY, randomString }: any) {
   
 
-  const [optionalRender, setOptionalRender] = useState(250)
-  
-  
+  const [optionalRender, setOptionalRender] = useState(250) 
+  // const [clicked, setClicked] = useState(false)
+  // clicked ? setOptionalRender(0) : null
   
 
  useEffect(()=>{
@@ -99,7 +99,9 @@ export function CardPattern({ mouseX, mouseY, randomString }: any) {
 
 
   return (
-    <div className="pointer-events-none">
+    <div 
+    className="pointer-events-none"
+    >
       <div className="absolute inset-0 rounded-2xl group-hover/card:opacity-100"></div>
       <motion.div
         className="absolute inset-0 rounded-2xl bg-gradient-to-r from-red-600 to-red-700 opacity-0  backdrop-blur-xl transition duration-500 group-hover/card:opacity-100"
