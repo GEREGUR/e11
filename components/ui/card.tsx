@@ -8,9 +8,11 @@ import Example from "./reg-button";
 
 export const EvervaultCard = ({
   text,
+  subtext,
   className,
 }: {
   text?: string;
+  subtext?: string;
   className?: string;
 }) => {
   let mouseX = useMotionValue(0);
@@ -22,7 +24,7 @@ export const EvervaultCard = ({
     const interval = setInterval(() => {
       let str = generateRandomString(10500);
       setRandomString(str);
-    }, 50); // Update every 10 milliseconds
+    }, 50);
 
     return () => clearInterval(interval);
   }, []);
@@ -34,22 +36,16 @@ export const EvervaultCard = ({
 
     const str = generateRandomString(1500);
     setRandomString(str);
-  }  
-
-
-  // console.log(width)
-  // console.log(height)
-  // const [scrolled, setScrolled] = useState(false)
+  }
 
   return (
     <div
       className={cn(
         "relative flex aspect-square h-full w-full items-center justify-center bg-transparent",
-        className,
+        className
       )}
     >
       <div
-        
         onMouseMove={onMouseMove}
         className="group/card relative flex h-full w-full items-center justify-center overflow-hidden bg-transparent transition"
       >
@@ -59,17 +55,16 @@ export const EvervaultCard = ({
           randomString={randomString}
         />
         <div className="relative z-10 flex flex-col items-center justify-center">
-          <div className="relative flex h-44  w-44 items-center justify-center rounded-full text-4xl font-bold text-white">
+          <div className="relative flex flex-col h-44  w-auto items-center justify-center rounded-full text-4xl font-bold text-white">
             <div className="absolute h-full w-full rounded-full blur-sm dark:bg-black/[0.8]" />
-            <span className="z-20 select-none text-8xl text-white md:text-9xl">
+            <span className="z-20 select-none text-4xl bg-gradient-to-r from-red-700 via-red-700 to-red-500 inline-block text-transparent bg-clip-text md:text-9xl p-2">
               {text}
             </span>
+            <span className="text-5xl font-light">{subtext}</span>
           </div>
-          <Example />
-          {/* <MdKeyboardArrowDown
-            className="duration-2000 absolute bottom-[-6em] animate-bounce text-white"
-            size={40}
-          /> */}
+          <div className="mt-6">
+            <Example />
+          </div>
         </div>
       </div>
     </div>
@@ -77,24 +72,16 @@ export const EvervaultCard = ({
 };
 
 export function CardPattern({ mouseX, mouseY, randomString }: any) {
-  
+  const [optionalRender, setOptionalRender] = useState(250);
 
-  const [optionalRender, setOptionalRender] = useState(250)
-  
-  
-  
-
- useEffect(()=>{
-  if (window.innerWidth <= 480) {
-    setOptionalRender(1000);
-  }
-
- }, [])
-  
+  useEffect(() => {
+    if (window.innerWidth <= 480) {
+      setOptionalRender(1000);
+    }
+  }, []);
 
   let maskImage = useMotionTemplate`radial-gradient(${optionalRender}px at ${mouseX}px ${mouseY}px, white, transparent)`;
   let style = { maskImage, WebkitMaskImage: maskImage };
-
 
   return (
     <div className="pointer-events-none">

@@ -5,7 +5,7 @@ const Example = () => {
   return <FollowButton />;
 };
 
-const TARGET_TEXT = "Follow us";
+const TARGET_TEXT = "Follow me";
 const CYCLES_PER_LETTER = 2;
 const SHUFFLE_TIME = 50;
 
