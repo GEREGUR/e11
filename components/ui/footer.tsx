@@ -23,7 +23,9 @@ const Footer = () => {
           <p>egor_rubailo.jsx</p>
         </li> */}
       </ul>
-      <div className="text-3xl text-white text-end font-bold">ER11</div>
+      <div className="text-3xl bg-gradient-to-r from-pink-500 to-rose-500 inline-block text-transparent bg-clip-text text-end font-bold">
+        ER11
+      </div>
     </footer>
   );
 };
