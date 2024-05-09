@@ -38,7 +38,7 @@ const Skeleton = ({ title, bgColor }: SkeletonProp) => (
   </div>
 );
 
-export const items = [
+const items = [
   {
     title: "E-commerce shop",
     description: "Next, JS, Tanstack Query, Swiper, Framer Motion",
