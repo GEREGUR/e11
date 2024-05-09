@@ -1,17 +1,26 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
+
+import { Chakra_Petch } from "next/font/google";
+import { ButtonProps } from "@nextui-org/react";
+
+const chackra = Chakra_Petch({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 
 const Example = () => {
-  return <FollowButton />;
+  return <FollowButton className="hover:text-red-700" />;
 };
 
-const TARGET_TEXT = "Follow me";
+const TARGET_TEXT = "SCROLL DOWN";
 const CYCLES_PER_LETTER = 2;
 const SHUFFLE_TIME = 50;
 
 const CHARS = "!@#9$%^&()2:{};|,1.<>/?";
 
-const FollowButton = () => {
+const FollowButton = ({ className }: ButtonProps) => {
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const [text, setText] = useState(TARGET_TEXT);
@@ -20,7 +29,8 @@ const FollowButton = () => {
     let pos = 0;
 
     intervalRef.current = setInterval(() => {
-      const scrambled = TARGET_TEXT.split("")
+      const TARGET_TEXT_CHANGED = "YOU BETTER DO IT";
+      const scrambled = TARGET_TEXT_CHANGED.split("")
         .map((char, index) => {
           if (pos / CYCLES_PER_LETTER > index) {
             return char;
@@ -36,7 +46,7 @@ const FollowButton = () => {
       setText(scrambled);
       pos++;
 
-      if (pos >= TARGET_TEXT.length * CYCLES_PER_LETTER) {
+      if (pos >= TARGET_TEXT_CHANGED.length * CYCLES_PER_LETTER) {
         stopScramble();
       }
     }, SHUFFLE_TIME);
@@ -45,7 +55,8 @@ const FollowButton = () => {
   const stopScramble = () => {
     clearInterval(intervalRef.current || undefined);
 
-    setText(TARGET_TEXT);
+    setText("YOU BETTER DO IT");
+    // setTimeout(() => setText(TARGET_TEXT), 1000);
   };
 
   return (
@@ -58,7 +69,10 @@ const FollowButton = () => {
       }}
       onMouseEnter={scramble}
       onMouseLeave={stopScramble}
-      className="bg-blacks group relative overflow-hidden rounded-lg px-[0.1rem] py-[0.1rem] font-sans font-medium uppercase text-white transition-colors"
+      className={cn(
+        "bg-blacks group relative hover:cursor-default overflow-hidden rounded-lg px-[0.1rem] py-[0.1rem] font-medium uppercase text-white duration-300 transition-colors",
+        className
+      )}
     >
       <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#bd0000_0%,#460000_50%,#BD0000_100%)]" />
       <div className="relative z-10 flex h-full w-full items-center gap-2 rounded-lg bg-black px-8 py-4">
