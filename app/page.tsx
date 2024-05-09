@@ -130,7 +130,11 @@ export default function Home() {
         <EvervaultCard text="Egor Rubailo"></EvervaultCard>
       </div>
       <Text />
-
+      <div className="w-full text-center">
+        <p className="bg-gradient-to-r from-red-500 to-orange-500 inline-block text-transparent bg-clip-text text-6xl p-4">
+          Projects
+        </p>
+      </div>
       <BentoGrid className="mx-auto max-w-screen p-2 sm:p-10">
         {items.map((item, i) => (
           <BentoGridItem
@@ -143,12 +147,12 @@ export default function Home() {
           />
         ))}
       </BentoGrid>
-      <h1 className="text-6xl text-center">
+      <p className="text-6xl text-center">
         My{" "}
         <span className=" bg-gradient-to-r from-red-600 via-red-700 to-red-500 inline-block text-transparent bg-clip-text">
           Tech Stack
         </span>
-      </h1>
+      </p>
       <div className="flex flex-row text-center self-center w-full">
         <TextGenerateEffect words={words} className="text-white" />
       </div>
