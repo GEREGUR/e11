@@ -1,4 +1,6 @@
+import { ChevronsLeft, ChevronsRight } from "lucide-react";
 import { Chakra_Petch } from "next/font/google";
+import Link from "next/link";
 
 const chackra = Chakra_Petch({
   subsets: ["latin"],
@@ -31,8 +33,21 @@ export const Text = () => {
           <span className=" bg-gradient-to-r from-red-600 via-red-700 to-red-800  inline-block text-transparent bg-clip-text">
             Tailwind
           </span>{" "}
-          where I really value clean and readable code.
+          where I really value clean and readable code.{" "}
         </p>
+
+        <Link
+          href={
+            "https://drive.google.com/file/d/17kaq_xmxM_HcyYNVBUpmbblsiOGJUoaX/view?usp=sharing"
+          }
+          className="pt-24 flex items-center"
+        >
+          <ChevronsRight color="#B91C1C" />
+          <span className=" bg-gradient-to-r from-red-500 via-red-500 to-red-800  inline-block text-transparent bg-clip-text text-7xl hover:bg-white duration-100">
+            RESUME
+          </span>
+          <ChevronsLeft color="#B91C1C" />
+        </Link>
       </article>
     </div>
   );

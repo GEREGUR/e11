@@ -130,29 +130,7 @@ export default function Home() {
         <EvervaultCard text="Egor Rubailo"></EvervaultCard>
       </div>
       <Text />
-      <h1 className="text-6xl text-center">
-        My{" "}
-        <span className=" bg-gradient-to-r from-red-600 via-red-700 to-red-500 inline-block text-transparent bg-clip-text">
-          Tech Stack
-        </span>
-      </h1>
-      <div className="flex flex-row text-center self-center w-full">
-        <TextGenerateEffect words={words} className="text-white" />
-      </div>
-      {/* <div className="w-screen flex flex-col items-center justify-center">
-        <BentoGrid className="mx-auto max-w-screen p-2 sm:p-10">
-          {items.map((item, i) => (
-            <BentoGridItem
-              key={i}
-              title={item.title}
-              description={item.description}
-              header={item.header}
-              icon={item.icon}
-              className={i === 3 || i === 6 ? "md:col-span-2" : ""}
-            />
-          ))}
-        </BentoGrid>
-      </div> */}
+
       <BentoGrid className="mx-auto max-w-screen p-2 sm:p-10">
         {items.map((item, i) => (
           <BentoGridItem
@@ -165,6 +143,15 @@ export default function Home() {
           />
         ))}
       </BentoGrid>
+      <h1 className="text-6xl text-center">
+        My{" "}
+        <span className=" bg-gradient-to-r from-red-600 via-red-700 to-red-500 inline-block text-transparent bg-clip-text">
+          Tech Stack
+        </span>
+      </h1>
+      <div className="flex flex-row text-center self-center w-full">
+        <TextGenerateEffect words={words} className="text-white" />
+      </div>
       <Accordion type="single" collapsible className="p-2 sm:p-10 text-white">
         <AccordionItem value="item-1">
           <AccordionTrigger>Is it accessible?</AccordionTrigger>
