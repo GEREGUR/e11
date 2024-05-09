@@ -1,4 +1,5 @@
 import { Instagram, Mail, Send } from "lucide-react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -9,16 +10,18 @@ const Footer = () => {
         </li>
         <li className="flex flex-row justify-start items-center gap-2">
           <Mail />
-          <p>georgerubaylo@gmail.com</p>
+          <Link href="mailto:georgerubaylo@gmail.com">
+            georgerubaylo@gmail.com
+          </Link>
         </li>
         <li className="flex flex-row justify-start items-center gap-2">
           <Send />
-          <p>@geregur</p>
+          <Link href={"https://t.me/geregur"}>@geregur</Link>
         </li>
-        <li className="flex flex-row justify-start items-center gap-2">
+        {/* <li className="flex flex-row justify-start items-center gap-2">
           <Instagram />
           <p>egor_rubailo.jsx</p>
-        </li>
+        </li> */}
       </ul>
       <div className="text-3xl text-white text-end font-bold">ER11</div>
     </footer>

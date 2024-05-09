@@ -118,7 +118,7 @@ const items = [
   },
 ];
 
-const words = `NEXT.js Tailwind Ract Typescript Framer-motion Styled Components JavaScript Node.js Tanstack Query&Router MongoDB Drizzle`;
+const words = `NEXT.js Tailwind React Typescript Framer-motion Styled Components JavaScript Node.js Tanstack Query&Router MongoDB Drizzle`;
 
 export default function Home() {
   return (
