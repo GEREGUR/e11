@@ -51,7 +51,7 @@ export const TextGenerateEffect = ({
       ref={elementRef}
     >
       <div className="mt-4">
-        <div className="text-white text-4xl leading-snug tracking-wide flex flex-row w-full">
+        <div className="text-white text-3xl leading-snug tracking-wide flex gap-8 flex-row w-full">
           <motion.div initial="hidden" animate={animationControls}>
             {wordsArray.map((word, idx) => (
               <motion.span
