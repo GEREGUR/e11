@@ -38,15 +38,15 @@ export const Text = () => {
 
         <Link
           href={
-            "https://drive.google.com/file/d/17kaq_xmxM_HcyYNVBUpmbblsiOGJUoaX/view?usp=sharing"
+            "https://drive.google.com/file/d/1W3_J2KiFULwxfJbhPN51Uv-dADwLVn7-/view?usp=sharing"
           }
-          className="pt-24 flex items-center"
+          className="pt-24 pb-12 flex items-center"
         >
-          <ChevronsRight color="#B91C1C" />
-          <span className=" bg-gradient-to-r from-red-500 via-red-500 to-red-800  inline-block text-transparent bg-clip-text text-7xl hover:bg-white duration-100">
+          <ChevronsRight />
+          <span className=" bg-gradient-to-r from-red-500 via-red-500 to-red-800  inline-block text-transparent bg-clip-text text-7xl font-bold hover:bg-white duration-100">
             RESUME
           </span>
-          <ChevronsLeft color="#B91C1C" />
+          <ChevronsLeft />
         </Link>
       </article>
     </div>
