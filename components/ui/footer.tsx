@@ -2,7 +2,7 @@ import { Instagram, Mail, Send } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="grid gap-14 h-[25vh] w-full grid-cols-1 sm:grid-cols-2 bg-black p-4 sm:p-10 text-lg text-white">
+    <footer className="grid gap-14 h-[25vh] w-full grid-cols-1 sm:grid-cols-2 bg-black p-2 sm:p-10 text-lg text-white">
       <ul className="flex flex-col gap-y-4">
         <li className="text-2xl">
           <h3 className="pb-6 border-b-2 border-white uppercase">Contact Me</h3>
