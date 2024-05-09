@@ -36,7 +36,7 @@ export const Text = () => {
           where I really value clean and readable code.{" "}
         </p>
 
-        <Link
+        {/* <Link
           href={
             "https://drive.google.com/file/d/1W3_J2KiFULwxfJbhPN51Uv-dADwLVn7-/view?usp=sharing"
           }
@@ -47,7 +47,7 @@ export const Text = () => {
             RESUME
           </span>
           <ChevronsLeft />
-        </Link>
+        </Link> */}
       </article>
     </div>
   );
