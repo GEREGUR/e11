@@ -18,7 +18,7 @@ export const Text = () => {
           </span>
         </h2>
         <p className="h-auto w-full tracking-tight items-center justify-center text-center font-normal">
-          Hi! My name is Egor Rubailo and I'm mostly known as a fleenance
+          Hi! My name is Egor Rubailo and I'm mostly known as a freelance
           frontend developer from Moscow who is passionate about optimization
           and UX/UI. Over the time I developed a skill set in a range of
           technologies and frameworks, including{" "}
